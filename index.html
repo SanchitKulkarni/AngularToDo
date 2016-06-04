@@ -26,11 +26,16 @@
                <p>Today:
                <a href  class="right" ng-click="func()">
                   <span class="glyphicon glyphicon-plus"></span>
-                  </a>
-               <div class="col-sm-8">
-               <div ng-show="input">
-        			<input class="form-control" id="ex1" type="text">
-      			</div>
+               </a>
+               <div class="col-sm-8" ng-show="input">
+               <div class="input-group">
+        			<input class="form-control" id="ex1" type="text" ng-model="task">
+        				<span class="input-group-btn" ng-click="add()">
+        				  <button type="button" class="btn btn-default btn-sm">
+          				  <span class="glyphicon glyphicon-pencil"></span>
+        				  </button>
+        				</span>
+               </div>
                </div>
                	<br>
                   <br>

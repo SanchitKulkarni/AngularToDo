@@ -4,6 +4,9 @@ app.controller("today",function($scope){
 	$scope.func = function(){
 		$scope.input = !$scope.input;
 	}
+	$scope.add = function(){
+		$scope.list.push($scope.task);
+	}
 });
 app.controller("tommorow",function($scope){
 	$scope.list = ["Make a To-Do App Tomorrow","Call Raghav tomorrow too"];
