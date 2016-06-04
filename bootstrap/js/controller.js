@@ -1,6 +1,6 @@
 var app = angular.module("ToDo",[]);
 app.controller("today",function($scope){
-	$scope.list = ["Make a To-Do App","Call Raghav for doubts"];
+	$scope.list = ["Make a To-Do App","Call Raghav for doubts","Experimenting with this"];
 	$scope.func = function(){
 		$scope.input = !$scope.input;
 	}

@@ -6,12 +6,12 @@
       <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="bootstrap/js/controller.js"></script>
       <style>
-      .right{
-         float: right;
-      }
-      .right-checkbox{
-      	padding-right: 20%;
-      }
+      	.right{
+         	float: right;
+      	}
+      	.strikethrough:checked + span{
+  			text-decoration:line-through
+		}
       </style>
       <title>To-Do</title>
    </head>
@@ -35,8 +35,8 @@
                	<br>
                   <br>
                    <ul>
-                     <li ng-repeat="x in list"><input type="checkbox" name="vehicle" value="">
-                     {{x}}
+                     <li ng-repeat="x in list"><input type="checkbox" name="vehicle" class="strikethrough" value="1">
+                     <span>{{x}}</span>
                      <a href class="right"><span class="glyphicon glyphicon-remove"></span></a>
                      </li>
                   </ul>
@@ -45,24 +45,44 @@
                <hr/>  
                <div ng-controller="tommorow">
                <p>Tommorow:
-                  <a href="#" class="right">
-                  <span class="glyphicon glyphicon-plus"></span> 
+                <a href  class="right" ng-click="func()">
+                  <span class="glyphicon glyphicon-plus"></span>
                   </a>
-                  <ul>
-                  	<li ng-repeat="x in list">{{x}}</li>
+               <div class="col-sm-8">
+               <div ng-show="input">
+        			<input class="form-control" id="ex1" type="text">
+      			</div>
+               </div>
+               	<br>
+                  <br>
+                   <ul>
+                     <li ng-repeat="x in list"><input type="checkbox" name="vehicle" value="">
+                     {{x}}
+                     <a href class="right"><span class="glyphicon glyphicon-remove"></span></a>
+                     </li>
                   </ul>
-               </p>
+               </p> 
                </div>
                <hr/>
                <div ng-controller="week">
                <p>In a Week:
-                  <a href="#" class="right">
-                  <span class="glyphicon glyphicon-plus"></span> 
+                  <a href  class="right" ng-click="func()">
+                  <span class="glyphicon glyphicon-plus"></span>
                   </a>
-               	  <ul>
-                  	<li ng-repeat="x in list">{{x}}</li>
+               <div class="col-sm-8">
+               <div ng-show="input">
+        			<input class="form-control" id="ex1" type="text">
+      			</div>
+               </div>
+               	<br>
+                  <br>
+                   <ul>
+                     <li ng-repeat="x in list"><input type="checkbox" name="vehicle" value="">
+                     {{x}}
+                     <a href class="right"><span class="glyphicon glyphicon-remove"></span></a>
+                     </li>
                   </ul>
-               </p>
+               </p> 
                </div>
                <hr/>
                <div ng-controller="someday">
