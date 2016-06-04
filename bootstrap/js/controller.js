@@ -2,10 +2,7 @@ var app = angular.module("ToDo",[]);
 app.controller("today",function($scope){
 	$scope.list = ["Make a To-Do App","Call Raghav for doubts"];
 	$scope.func = function(){
-		if($scope.input==true)
-			$scope.input=false;
-		else
-			$scope.input=true;
+		$scope.input = !$scope.input;
 	}
 });
 app.controller("tommorow",function($scope){

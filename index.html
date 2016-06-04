@@ -9,6 +9,9 @@
       .right{
          float: right;
       }
+      .right-checkbox{
+      	padding-right: 20%;
+      }
       </style>
       <title>To-Do</title>
    </head>
@@ -21,15 +24,21 @@
                <hr/>
                <div ng-controller="today" ng-init="input=false">
                <p>Today:
-               <div class="col-sm-4">
-        			<input class="form-control" id="ex1" type="text" ng-show="input">
-      			</div>
-               	<br>
-               	  <a href  class="right" ng-click="func()">
+               <a href  class="right" ng-click="func()">
                   <span class="glyphicon glyphicon-plus"></span>
-                  </a><!--ng-click, ng-show,3-->
+                  </a>
+               <div class="col-sm-8">
+               <div ng-show="input">
+        			<input class="form-control" id="ex1" type="text">
+      			</div>
+               </div>
+               	<br>
+                  <br>
                    <ul>
-                     <li ng-repeat="x in list">{{x}}</li>
+                     <li ng-repeat="x in list"><input type="checkbox" name="vehicle" value="">
+                     {{x}}
+                     <a href class="right"><span class="glyphicon glyphicon-remove"></span></a>
+                     </li>
                   </ul>
                </p> 
                </div>
